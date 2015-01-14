@@ -1,0 +1,33 @@
+<% if admin_signed_in? %>
+<p><%= link_to "New Post", new_post_path, class: 'btn btn-primary new' %></p>
+<% else %>
+
+<% end %>
+<div class="row">
+  <div class="col-md-8">
+    <% @posts.each do |post| %>
+    <div class="form-container posts">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="post-title">
+            <h2><%= post.title %></h2>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body">
+        <p><%= raw(post.body) %></p>
+      </div>
+      <div class='panel-footer'>
+        <%= link_to "Show post", post_path(post.id), class: 'btn btn-default' %>
+
+        <% if admin_signed_in? %>
+        <%= link_to "Edit", edit_post_path(post.id), class: 'btn btn-info' %>
+        <%= link_to "Delete", post, method: :delete, class: 'btn btn-danger' %>
+        <% else %>
+
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

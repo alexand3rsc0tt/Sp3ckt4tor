@@ -1,0 +1,11 @@
+<%= form_for @post do |f| %>
+<div class="form-group">
+  <%= f.text_field :title, class: 'form-control text-title', placeholder: 'Title',required: true %>
+</div>
+
+<div class="form-group">
+  <%= f.text_area :body, class: 'form-control text-title', placeholder: 'Body',required: true %>
+</div>
+
+<%= f.submit 'Create', class: 'btn btn-default' %>
+<% end %>

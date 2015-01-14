@@ -1,3 +1,18 @@
 // Place all the styles related to the static controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.profile-photo {
+  clear: both;
+  display: block;
+  max-width: 300px;
+  max-height: 300px;
+  margin: 0 auto 0px;
+  border-radius: 50%;
+  float: center;
+  padding-left: 5px;
+  size: 350px 350px;
+}
+
+.v-center {
+  margin-top:7%;
+}

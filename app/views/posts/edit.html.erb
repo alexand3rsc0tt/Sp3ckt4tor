@@ -4,7 +4,7 @@
   </div>
 
   <div data-no-turbolink>
-    <%= f.cktext_area :body, :ckeditor => {:uiColor => '#000000'} %>
+    <%= f.cktext_area :body, :ckeditor => {:uiColor => '#000000', :toolbar => 'spellchecker'} %>
   </div>
 
   <%= f.submit 'Update', class: 'btn btn-default' %>

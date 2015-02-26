@@ -15,5 +15,8 @@ test:
   database: db_test
 
 production:
-  <<: *default
-  database: db_production
+ adapter: postgresql
+ database: db_development
+ host: localhost
+ username: sp3ckt4tor
+ password: rainmms1
